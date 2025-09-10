@@ -30,18 +30,61 @@
             margin: 0 auto;
         }
         
-        header {
+        /* Portada de integrantes */
+        .portada {
+            background: linear-gradient(135deg, var(--etapa1), var(--etapa2));
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .portada h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .portada h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        
+        .integrantes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .integrante {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .integrante h3 {
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 8px;
+        }
+        
+        /* Encabezado de la infografía */
+        .encabezado {
             text-align: center;
             margin-bottom: 40px;
             padding: 20px;
-            background: linear-gradient(135deg, var(--etapa1), var(--etapa2));
+            background: linear-gradient(135deg, var(--etapa3), var(--etapa4));
             border-radius: 10px;
             color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        h1 {
-            font-size: 2.5rem;
+        .encabezado h2 {
+            font-size: 2rem;
             margin-bottom: 10px;
         }
         
@@ -132,17 +175,54 @@
                 grid-template-columns: 1fr;
             }
             
-            h1 {
+            .portada h1 {
                 font-size: 2rem;
+            }
+            
+            .encabezado h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Las 4 Etapas del Design Thinking</h1>
+    <!-- Portada de integrantes -->
+    <section class="portada">
+        <h1>Proyecto: Gestor de Finanzas Personales</h1>
+        <h2>Aplicación de las 4 etapas del Design Thinking</h2>
+        
+        <div class="integrantes">
+            <div class="integrante">
+                <h3>Integrante 1</h3>
+                <p>Nombre: Challco Ccohuanqui Samir Junior</p>
+            </div>
+            
+            <div class="integrante">
+                <h3>Integrante 2</h3>
+                <p>Nombre: Huaychi Sencia José Natividad</p>
+            </div>
+            
+            <div class="integrante">
+                <h3>Integrante 3</h3>
+                <p>Nombre: Lizarraga Aliaga Alexis Joaquin</p>
+            </div>
+            
+            <div class="integrante">
+                <h3>Integrante 4</h3>
+                <p>Nombre: Tejada Taco Francys Raul</p>
+            </div>
+
+            <div class="integrante">
+                <h3>Integrante 5</h3>
+                <p>Nombre: Zavala Huacarpuma Juan Aldair</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="encabezado">
+        <h2>Las 4 Etapas del Design Thinking</h2>
         <p>Aplicadas al desarrollo de un Gestor de Finanzas Personales para Estudiantes</p>
-    </header>
+    </div>
     
     <div class="intro">
         <p>El Design Thinking es una metodología centrada en el usuario que permite resolver problemas complejos mediante un proceso iterativo. En el desarrollo de soluciones tecnológicas, este enfoque asegura que la propuesta final sea relevante, práctica y alineada con las verdaderas necesidades de los usuarios.</p>
