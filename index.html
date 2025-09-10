@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Thinking - Gestor de Finanzas Personales</title>
+    <style>
+        :root {
+            --etapa1: #4e89ae;
+            --etapa2: #43658b;
+            --etapa3: #ed9b40;
+            --etapa4: #a01c32;
+            --texto: #333;
+            --fondo: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--fondo);
+            color: var(--texto);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--etapa1), var(--etapa2));
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: justify;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .etapa {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .etapa:hover {
+            transform: translateY(-5px);
+        }
+        
+        .etapa-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        
+        .etapa1 .etapa-header { background-color: var(--etapa1); }
+        .etapa2 .etapa-header { background-color: var(--etapa2); }
+        .etapa3 .etapa-header { background-color: var(--etapa3); }
+        .etapa4 .etapa-header { background-color: var(--etapa4); }
+        
+        .etapa-content {
+            padding: 25px;
+            background-color: white;
+            min-height: 350px;
+        }
+        
+        .etapa h3 {
+            margin-bottom: 15px;
+            color: var(--texto);
+            border-bottom: 2px solid;
+            padding-bottom: 8px;
+        }
+        
+        .etapa1 h3 { border-color: var(--etapa1); }
+        .etapa2 h3 { border-color: var(--etapa2); }
+        .etapa3 h3 { border-color: var(--etapa3); }
+        .etapa4 h3 { border-color: var(--etapa4); }
+        
+        .etapa-content p, .etapa-content ul {
+            margin-bottom: 15px;
+        }
+        
+        .etapa-content ul {
+            padding-left: 20px;
+        }
+        
+        .etapa-content li {
+            margin-bottom: 8px;
+        }
+        
+        .conclusion {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 20px;
+            border-left: 5px solid var(--etapa2);
+        }
+        
+        .conclusion h2 {
+            color: var(--etapa2);
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Las 4 Etapas del Design Thinking</h1>
+        <p>Aplicadas al desarrollo de un Gestor de Finanzas Personales para Estudiantes</p>
+    </header>
+    
+    <div class="intro">
+        <p>El Design Thinking es una metodología centrada en el usuario que permite resolver problemas complejos mediante un proceso iterativo. En el desarrollo de soluciones tecnológicas, este enfoque asegura que la propuesta final sea relevante, práctica y alineada con las verdaderas necesidades de los usuarios.</p>
+    </div>
+    
+    <div class="container">
+        <div class="etapa etapa1">
+            <div class="etapa-header">Etapa 1: Empatizar</div>
+            <div class="etapa-content">
+                <h3>Comprensión del usuario</h3>
+                <p>Identificamos que los estudiantes enfrentan dificultades para organizar sus finanzas personales, lo que impacta su bienestar económico, rendimiento académico y estado emocional.</p>
+                
+                <h3>Perfil de usuario</h3>
+                <ul>
+                    <li>Estudiantes de escuelas que buscan reforzar conocimientos básicos</li>
+                    <li>Estudiantes de colegios que necesitan apoyo para tareas y proyectos</li>
+                    <li>Estudiantes universitarios que requieren soluciones avanzadas</li>
+                </ul>
+                
+                <h3>Necesidades identificadas</h3>
+                <p>Falta de herramientas accesibles para organizar finanzas personales, leading a dificultades en la gestión económica diaria.</p>
+            </div>
+        </div>
+        
+        <div class="etapa etapa2">
+            <div class="etapa-header">Etapa 2: Idear</div>
+            <div class="etapa-content">
+                <h3>Lluvia de ideas</h3>
+                <p>Generamos múltiples soluciones potenciales para abordar el problema identificado:</p>
+                
+                <ul>
+                    <li><strong>Integración de pagos en el carnet universitario:</strong> Transformar el carnet en herramienta multifuncional</li>
+                    <li><strong>Plataforma de educación financiera:</strong> Microcursos sobre ahorro, presupuesto y deudas</li>
+                    <li><strong>Gestor de Finanzas Personales:</strong> Aplicación para registrar gastos y generar reportes</li>
+                    <li><strong>Red de Beneficios y Descuentos:</strong> Plataforma integrada con descuentos exclusivos</li>
+                </ul>
+                
+                <h3>Solución seleccionada</h3>
+                <p>Desarrollar una aplicación en Python que permita registrar gastos, clasificarlos automáticamente y generar reportes con alertas y objetivos de ahorro.</p>
+            </div>
+        </div>
+        
+        <div class="etapa etapa3">
+            <div class="etapa-header">Etapa 3: Prototipar</div>
+            <div class="etapa-content">
+                <h3>Herramientas utilizadas</h3>
+                <p>Editores de código con integración de IA para agilizar el desarrollo:</p>
+                
+                <ul>
+                    <li><strong>Visual Studio Code:</strong> Con GitHub Copilot e IntelliCode para autocompletado inteligente</li>
+                    <li><strong>JetBrains IDEs:</strong> Con AI Assistant para debugging y refactorización</li>
+                    <li><strong>Cursor:</strong> Con chat de código base y edición in-line mediante IA</li>
+                </ul>
+                
+                <h3>Características del prototipo</h3>
+                <ul>
+                    <li>Interfaz intuitiva para registro de gastos</li>
+                    <li>Clasificación automática en categorías</li>
+                    <li>Generación de reportes y alertas</li>
+                    <li>Establecimiento de objetivos de ahorro</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="etapa etapa4">
+            <div class="etapa-header">Etapa 4: Testear</div>
+            <div class="etapa-content">
+                <h3>Validación con usuarios</h3>
+                <p>La aplicación se pondrá a prueba con estudiantes reales para evaluar:</p>
+                
+                <ul>
+                    <li>Usabilidad de la interfaz</li>
+                    <li>Precisión en la clasificación de gastos</li>
+                    <li>Utilidad de las alertas y reportes</li>
+                    <li>Impacto en los hábitos financieros</li>
+                </ul>
+                
+                <h3>Iteraciones y mejoras</h3>
+                <p>Basándonos en el feedback recibido, realizaremos ajustes para:</p>
+                
+                <ul>
+                    <li>Mejorar la experiencia de usuario</li>
+                    <li>Añadir funcionalidades solicitadas</li>
+                    <li>Optimizar el rendimiento de la aplicación</li>
+                    <li>Corregir posibles errores</li>
+                </ul>
+                
+                <h3>Implementación final</h3>
+                <p>Despliegue de la aplicación para su uso general por parte de los estudiantes.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="conclusion">
+        <h2>Conclusión</h2>
+        <p>La aplicación del proceso de Design Thinking ha permitido identificar una necesidad real entre los estudiantes y desarrollar una solución práctica y viable. El Gestor de Finanzas Personales no solo responde a una necesidad inmediata de organización económica, sino que también tiene potencial para escalarse con funciones adicionales de educación financiera en el futuro.</p>
+        <p>El uso de herramientas de IA en el desarrollo ha acelerado el proceso de prototipado, permitiendo una implementación más rápida y eficiente de la solución.</p>
+    </div>
+</body>
+</html>
